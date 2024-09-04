@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- EditText untuk NIM -->
+        <EditText
+            android:id="@+id/etNim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Induk Mahasiswa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="number" />
+
+        <!-- EditText untuk Nama -->
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nama"
+            app:layout_constraintTop_toBottomOf="@id/etNim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- EditText untuk Alamat -->
+        <EditText
+            android:id="@+id/etAlamat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            app:layout_constraintTop_toBottomOf="@id/etNama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- EditText untuk Jurusan -->
+        <EditText
+            android:id="@+id/etJurusan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Jurusan"
+            app:layout_constraintTop_toBottomOf="@id/etAlamat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Button Simpan -->
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            app:layout_constraintTop_toBottomOf="@id/etJurusan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
