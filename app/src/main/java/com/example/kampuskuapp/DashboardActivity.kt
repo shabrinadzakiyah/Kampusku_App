@@ -7,33 +7,31 @@ import androidx.appcompat.app.AppCompatActivity
 
 class DashboardActivity : AppCompatActivity() {
 
+    private lateinit var btnViewStudents: Button
+    private lateinit var btnAddStudent: Button
+    private lateinit var btnInfo: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        // Inisialisasi komponen UI
-        val btnLihatData: Button = findViewById(R.id.btn_lihat_data)
-        val btnInputData: Button = findViewById(R.id.btn_input_data)
-        val btnInformasi: Button = findViewById(R.id.btn_informasi)
+        btnViewStudents = findViewById(R.id.btnViewStudents)
+        btnAddStudent = findViewById(R.id.btnAddStudent)
+        btnInfo = findViewById(R.id.btnInfo)
 
-        // Menambahkan listener untuk tombol lihat data
-        btnLihatData.setOnClickListener {
-            navigateTo(LihatDataActivity::class.java)
+        btnViewStudents.setOnClickListener {
+            val intent = Intent(this, StudentListActivity::class.java)
+            startActivity(intent)
         }
 
-        // Menambahkan listener untuk tombol input data
-        btnInputData.setOnClickListener {
-            navigateTo(InputMahasiswaActivity::class.java)
+        btnAddStudent.setOnClickListener {
+            val intent = Intent(this, AddEditStudentActivity::class.java)
+            startActivity(intent)
         }
 
-        // Menambahkan listener untuk tombol informasi
-        btnInformasi.setOnClickListener {
-            navigateTo(TentangAplikasiActivity::class.java)
+        btnInfo.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            startActivity(intent)
         }
-    }
-
-    private fun <T> navigateTo(activityClass: Class<T>) {
-        val intent = Intent(this, activityClass)
-        startActivity(intent)
     }
 }
