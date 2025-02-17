@@ -35,7 +35,7 @@ Aplikasi Android untuk manajemen data mahasiswa dengan fitur CRUD (Create, Read,
 ## 🛠 Teknologi yang Digunakan
 
 - **Android Studio** - IDE utama untuk pengembangan.
-- **Kotlin/Java** - Bahasa pemrograman yang digunakan.
+- **Kotlin** - Bahasa pemrograman yang digunakan.
 - **SQLite** - Database untuk menyimpan data mahasiswa.
 
 ---
